@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react'
+import { Download, FileText, Mail, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react'
 
 export default function Contact() {
   const sectionRef = useRef(null)
@@ -39,6 +39,40 @@ export default function Contact() {
             <p className="mt-6 text-surface-400 leading-relaxed max-w-md">
               Open to collaborations, freelance projects, and full-time opportunities in AI and full-stack development.
             </p>
+
+            <div className="mt-8 rounded-2xl border border-surface-800 bg-surface-900/30 p-5 max-w-md">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-surface-800/50 flex items-center justify-center">
+                  <FileText size={18} />
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-surface-200">Resume / CV</h3>
+                  <p className="mt-1 text-sm text-surface-500 leading-relaxed">
+                    View my full CV in the browser or download a PDF copy.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="/resume/my_resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-100 text-surface-950 text-sm font-medium hover:bg-white transition-colors"
+                >
+                  <FileText size={14} />
+                  View CV
+                </a>
+                <a
+                  href="/resume/my_resume.pdf"
+                  download
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-surface-700 text-surface-300 text-sm font-medium hover:border-surface-500 hover:text-surface-100 transition-colors"
+                >
+                  <Download size={14} />
+                  Download
+                </a>
+              </div>
+            </div>
 
             <div className="mt-10 space-y-4">
               <a

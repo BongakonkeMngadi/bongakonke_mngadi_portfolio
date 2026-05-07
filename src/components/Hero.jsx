@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from 'lucide-react'
+import { Download, FileText, Github, Linkedin, Twitter } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -40,6 +40,23 @@ export default function Hero() {
               className="px-6 py-3 rounded-lg border border-surface-700 text-surface-300 text-sm font-medium hover:border-surface-500 hover:text-surface-100 transition-colors duration-200"
             >
               Get in touch
+            </a>
+            <a
+              href="/resume/my_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-surface-700 text-surface-300 text-sm font-medium hover:border-surface-500 hover:text-surface-100 transition-colors duration-200"
+            >
+              <FileText size={16} />
+              View CV
+            </a>
+            <a
+              href="/resume/my_resume.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-emerald-400/30 text-emerald-300 text-sm font-medium hover:border-emerald-300/60 hover:text-emerald-200 transition-colors duration-200"
+            >
+              <Download size={16} />
+              Download CV
             </a>
           </div>
 
